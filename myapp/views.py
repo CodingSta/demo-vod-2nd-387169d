@@ -1,5 +1,12 @@
 from django.shortcuts import redirect, render
-from django.views.generic import TemplateView, RedirectView
+from django.views.generic import ListView, DetailView, TemplateView, RedirectView
+from .models import Post
+
+
+post_list = ListView.as_view(model=Post)
+
+
+post_detail = DetailView.as_view(model=Post)
 
 
 # def myview(request):

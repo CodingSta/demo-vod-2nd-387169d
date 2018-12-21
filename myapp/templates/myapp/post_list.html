@@ -1,0 +1,12 @@
+
+<ul>
+{% for post in post_list %}
+<li>
+    <a href="{{ post.get_absolute_url }}">
+        {{ post.message }}
+    </a>
+    by {{ post.author }}
+    at {{ post.created_at }}
+</li>
+{% endfor %}
+</ul>
